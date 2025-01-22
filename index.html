@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"> <!-- Codificacion -->
+    <meta name="viewport" content="width=device-width"> <!-- Sea adaptable, ancho del contenido sea el ancho de la pantalla-->
+
+    <title>Encabezado de Web</title>
+
+    <meta name="description" content="Portafolio de Angelgamcr"> <!-- Aparece en descripcion de google normalmente -->
+
+    <!-- OPEN GRAPH  -->
+    <meta property="og:title" content="Encabezado de Web">
+    <meta property="og:description" content="Una descripcion">
+    <meta property="og:image" content="/images/angel.jpeg">
+    <meta property="og:image:alt" content="Foto de Angel Gamboa"> 
+    <!-- Con un metadato se puede evitar que metan la pagina en un iframe -->
+
+
+    <link rel="alternate" href="https://angel.dev/en" hreflang="en-US"> <!-- para que identifique que es la misma pagina pero en otro idioma -->
+    <link rel="canonical" href="https://angel.dev"> <!-- Pagina principal -->
+
+    <meta name="robots" content="index, follow"> <!-- Metadato de google, deja indexar y seguir enlaces -->
+    <meta name="theme-color" content="#8F7ADA"> <!-- Cambia el color de la parte superior del navegador -->
+    <link rel="icon" type="image/jpeg" href="images/angel.jpeg" > <!-- Poner Icono de la web en la parte superior del navegador -->
+
+
+
+    <style>
+      body {
+        background: #f0f0f0;
+      }
+    </style>
+
+  </head>
+  <body>
+    <!-- Esto es un comentario  -->
+    <header>
+      <h1>Portafolio de @angelgamcr</h1>
+
+      <nav>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#proyectos">Proyectos</a> <!-- Enlaces internos-->
+        
+        <a
+          rel="noreferrer"
+          target="_blank"
+          href="https://www.linkedin.com/in/angelgamcr"
+        >Linkedin</a> <!--  -->
+      </nav>
+    </header>
+
+
+
+    <!-- <dialog open> -->
+    <dialog id="modal">
+      <h1>Sabias que puedes abrir un modal asi?</h1>
+      <p>Y es totaalmente nativo!</p>
+      <button id="hide">Cerrar Modal</button>
+    </dialog>
+
+    <button id="show">Abrir Modal(dialog)</button>
+    
+    <script>
+
+      window.show.addEventListener('click', () => {
+        window.modal.showModal()
+      })
+      window.hide.addEventListener('click', () => {
+        window.modal.close()
+      })
+      
+    </script>
+
+    <iframe style="width: 100%; aspect-ratio: 16/9;" src="https://www.youtube.com/embed/3nYLTiY5skU?si=_SHgdxrt0WEPxyVi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    
+    <video autoplay muted loop src="https://filesamples.com/samples/video/mp4/sample_960x400_ocean_with_audio.mp4"></video>
+
+    <audio controls src="https://download.samplelib.com/mp3/sample-15s.mp3"></audio>
+
+
+    <main>
+      <p1>Descripcion <strong>En negrita</strong> descripcion</p1>
+
+      <h2 id="experiencia">Experiencia</h2>
+
+      <ul>
+        <li class="list-item">Adevinta - 2022</li>
+        <li class="list-item">Adevinta - 2022</li>
+        <li class="list-item">Adevinta - 2022</li>
+      </ul>
+
+      <a download href="/images/angel.jpeg">
+        <img
+          id="photo-image "
+          height="200"
+          width="200"
+          title="Foto de Angel"
+          alt="Foto de Angel"
+          src="/images/angel.jpeg" 
+        >
+
+      </a>
+      
+
+      <input type="">  
+
+      <h2 id="proyectos">Proyectos realizados</h2>
+
+      <aside>
+        <header>
+          <h3>
+            Mis tecnologias favoritas
+          </h3>
+        </header>
+        <ol type="a" reversed start="11">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li value="2">Javascript</li>
+          <li>Node.js</li>
+        </ol>
+      </aside>
+
+      <section>
+        <article>
+          <header>
+            <h4>Foto con menos importancia</h4>
+            <img style="width: 100%; aspect-ratio: 128/111;" loading="lazy" src="/images/angel.jpeg" alt="Foto de menos importancia" >
+          </header>
+
+          <p>
+            Imagen con loading lazy hace que cargue despues ya que no esta al principio
+          </p>
+        </article>
+        <article>
+          <header>
+            <h4>Sitio Web Corporativo</h4>
+          </header>
+          <p>
+            Desarrollo de un sitio web corporativo con una interfaz amigable moderna
+          </p>
+          <footer>
+            Tecnologias utilizadas: HTML, CSS, JavaScript
+          </footer>
+        </article>
+
+      </section>
+
+      <section>
+        <h2>Preguntas frecuentes</h2>
+
+        <details open>
+          <summary>Que estudios tienes?</summary>
+          <p>Estudie en el TEC</p>
+        </details>
+        <details>
+          <summary>Cuales son tus hobbies?</summary>
+          <p>Me gusta...</p>
+        </details>
+        <details>
+          <summary>Cual es tu lenguaje favorito?</summary>
+          <p>Me encanta el JavaScript</p>
+        </details>
+      </section>
+
+      <section>
+        <h2>Formulario de contacto</h2>
+      
+        <form method="post" action="/" >
+          <fieldset>
+            <legend>Informacion Personal</legend>
+
+            <label>Nombre:
+              <input type="text" id="name" name="name" placeholder="Angel Gamboa Cruz" required>
+            </label>
+
+            <label>Email:
+              <input type="email" id="email" name="email" placeholder="angelgamcr@gmail.com" required>
+            </label>
+            
+          </fieldset>
+
+          <fieldset>
+            <legend>Informacion personal</legend>
+
+            <label>Telefono:
+              <input type="tel" id="phone" name="phone" placeholder="87070795" required pattern="[0-9]{9}">
+            </label>
+            
+          </fieldset>
+          <fieldset>
+            <legend>Otros</legend>
+
+            <div>
+              <label for="why">Por que quieresd contactar?</label>
+              <select name="why" id="why">
+                <option value="1">Trabajo</option>
+                <option value="2">Duda</option>
+                <option value="3">Mas Informacion</option>
+              </select>
+            </div> 
+            <div>
+              <label for="terms">Aceptas los terminos?</label>
+              <input type="checkbox" id="terms" name="terms" required>
+            </div> 
+
+            <div>
+              <datalist id="languages">
+                <option value="JavaScript"></option>
+                <option value="Python"></option>
+                <option value="Java"></option>
+                <option value="C#"></option>
+              </datalist>
+              <label>
+                Con que lenguaje quieres que te ayude?
+                <input list="languages" name="languages">
+              </label>
+            </div>
+          </fieldset>
+
+          <!-- <input type="submit" value="Enviar Contacto"> -->
+          <button type="submit">Enviar contacto</button>
+        </form>
+      </section>
+
+    </main>
+
+    <footer>
+      Copyright © 2025 - El portafolio
+
+      <a href="mailto:angelgamcr@gmail.com">Enviame un correo</a>
+      <a href="tel:+50687070795">Llamar por telefono</a>
+      <a rel="noreferrer" target="_blank" href="https://wa.me/50687070795?text=Hola%20estoy%20interesado">Whatsapp</a>
+
+    </footer>
+    
+  </body>
+ 
+
+</html>
